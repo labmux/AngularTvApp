@@ -3,7 +3,7 @@
         <mat-form-field class="searchField">
             <input matInput type="text" name="search" [(ngModel)]="search" placeholder="Write the name of a show...">
         </mat-form-field>
-        <button mat-button>Search</button>
+        <button mat-button (click)="searchBtn(search)">Search</button>
     </form>
 </mat-toolbar>
 

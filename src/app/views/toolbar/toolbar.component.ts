@@ -11,4 +11,7 @@ export class ToolbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  searchBtn(search: string) {
+  }
 }
