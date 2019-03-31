@@ -1,30 +1,41 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs/internal/Observable";
+import { Observable } from "rxjs/internal/Observable";
 import { HttpClient } from "@angular/common/http";
 import { Show } from "../show";
+import { map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TvMazeApiService {
-  private url: string = 'http://api.tvmaze.com/singlesearch/shows?q=';
-  public createShow(show: Show) {}
-  public getShows(url?: string) {
-      return this.httpClient.get<Show[]>(`${this.url}`);
-  }
+  // private searchUrl: string = 'http://api.tvmaze.com/search/shows?q=';
+  // private url: string = 'http://api.tvmaze.com/shows/1/episodes';
+    showsUrl: string = 'http://api.tvmaze.com/search/shows?q=';
+    url: string = 'http://api.tvmaze.com/shows/'
+    show: any;
 
-  private extractData(res: Response) {
-    const response = res;
-    return response || {};
-  }
+  constructor(private http: HttpClient) {
 
-
-
-  setUrl(show: string): void {
-    this.url += show;
   }
 
 
+  public getShows(search: string): Observable<any> {
+      if (search) {
+          console.log(this.showsUrl + search);
+          return this.http.get(this.showsUrl + search);
+      }
+  }
 
-  constructor(private http: HttpClient) { }
+  public getSeasons(id: string): Observable<any> {
+      if (id) {
+          return this.http.get(this.url + id + '/seasons');
+      }
+  }
+
+    public getEpisodes(search: string): Observable<any> {
+        if (search) {
+            return this.http.get(this.url + search + '/episodes');
+        }
+    }
+
 }
