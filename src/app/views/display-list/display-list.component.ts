@@ -9,21 +9,13 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./display-list.component.scss']
 })
 export class DisplayListComponent implements OnInit {
-
-
-  displayedColumns;
-
-  shows: any;
+    shows: any;
   search: string;
-  word:string = 'TV';
   constructor(private api: TvMazeApiService, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
-    // let search: string = this.toolbar.getSearch();
-
-
-      this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe(params => {
           this.search = params.get('search');
           this.getShows();
       });

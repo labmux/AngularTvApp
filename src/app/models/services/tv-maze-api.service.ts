@@ -11,7 +11,7 @@ export class TvMazeApiService {
   // private searchUrl: string = 'http://api.tvmaze.com/search/shows?q=';
   // private url: string = 'http://api.tvmaze.com/shows/1/episodes';
     showsUrl: string = 'http://api.tvmaze.com/search/shows?q=';
-    url: string = 'http://api.tvmaze.com/shows/'
+    url: string = 'http://api.tvmaze.com/shows/';
     show: any;
 
   constructor(private http: HttpClient) {
