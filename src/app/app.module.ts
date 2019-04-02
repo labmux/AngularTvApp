@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule} from "@angular/common/http";
-import { EventEmitter } from "@angular/core";
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatDividerModule, MatInputModule, MatList, MatListModule} from "@angular/material";
 import {MatButtonModule} from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
     // tables
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -18,11 +18,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // Views
 import { ToolbarComponent} from './views/toolbar/toolbar.component';
 import { DisplayListComponent } from './views/display-list/display-list.component';
+import { DisplaySeasonsComponent } from './views/display-seasons/display-seasons.component';
 
 // Service
 import { TvMazeApiService } from "./models/services/tv-maze-api.service";
-import { MatExpansionModule } from '@angular/material/expansion';
-import { DisplaySeasonsComponent } from './views/display-seasons/display-seasons.component';
 
 @NgModule({
   declarations: [

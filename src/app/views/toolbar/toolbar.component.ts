@@ -1,7 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import { TvMazeApiService } from "../../models/services/tv-maze-api.service";
 import { DisplayListComponent } from "../display-list/display-list.component";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -10,11 +10,14 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ToolbarComponent {
 
-  title: string = 'Tv Maze Api';
-  search: string;
+  search: string;   //ngModel of our search bar
 
   constructor(private api: TvMazeApiService, private display: DisplayListComponent, private route: Router) { }
 
+    /**
+     * On search, save search parameter and redirect to displayList component
+     * @param {string} search
+     */
   searchBtn(search: string) : void {
     this.route.navigateByUrl('shows/' + this.search);
   }

@@ -4,13 +4,11 @@ import {DisplayListComponent} from "./views/display-list/display-list.component"
 import {DisplaySeasonsComponent} from "./views/display-seasons/display-seasons.component";
 
 const routes: Routes = [
-    // { path:'shows', component: DisplayListComponent },
-    { path: 'shows/:search', component: DisplayListComponent},
-    { path: 'seasons', component: DisplaySeasonsComponent},
-    { path: 'seasons/:id', component: DisplaySeasonsComponent}
 
-    // { path: 'displayList', component: }
-];
+    { path: 'shows/:search', component: DisplayListComponent},  //param to keep track of shows
+    { path: 'seasons', component: DisplaySeasonsComponent},
+    { path: 'seasons/:id', component: DisplaySeasonsComponent}  //param to keep trach of seasons and episodes
+    ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
