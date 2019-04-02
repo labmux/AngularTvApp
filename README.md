@@ -1,4 +1,5 @@
 # AngularTvApp
+The purpose of this project is to learn to encorporate MVC framework within an angular environment to make api calls using the Tv Maze api
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
