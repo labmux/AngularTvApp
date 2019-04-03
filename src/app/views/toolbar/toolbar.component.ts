@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 })
 export class ToolbarComponent {
 
+  name: string;
   search: string;   //ngModel of our search bar
 
   constructor(private api: TvMazeApiService, private display: DisplayListComponent, private route: Router) { }
@@ -19,6 +20,7 @@ export class ToolbarComponent {
      * @param {string} search
      */
   searchBtn(search: string) : void {
+
     this.route.navigateByUrl('shows/' + this.search);
   }
 }

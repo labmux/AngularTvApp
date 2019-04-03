@@ -15,7 +15,6 @@ export class DisplaySeasonsComponent implements OnInit {
 
   // information required for table
   displayedColumns = ['number', 'name', 'airdate'];
-  dataSource: any;
 
   constructor(private api: TvMazeApiService, private route: ActivatedRoute) { }
 
@@ -48,13 +47,13 @@ export class DisplaySeasonsComponent implements OnInit {
         this.api.getEpisodes(this.id).subscribe(results => {
             this.episodes = results;
 
-            // TODO: algorithm to create array of episodes by seasons
-            for (let i = 1; i <= this.seasons.length; i++) {
-                let season = 1;
-                while (this.episodes.season == i) {
-                    this.dataSource[i].episode = this.episodes[i];
-                }
-            }
+            // // TODO: algorithm to create array of episodes by seasons
+            // for (let i = 1; i <= this.seasons.length; i++) {
+            //     let season = 1;
+            //     while (this.episodes.season == i) {
+            //         this.dataSource[i].episode = this.episodes[i];
+            //     }
+            // }
         });
     }
 

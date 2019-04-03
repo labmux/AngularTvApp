@@ -8,7 +8,7 @@ import { HttpClientModule} from "@angular/common/http";
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatDividerModule, MatInputModule, MatList, MatListModule} from "@angular/material";
+import {MatDividerModule, MatInputModule,  MatListModule} from "@angular/material";
 import {MatButtonModule} from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
     // tables
