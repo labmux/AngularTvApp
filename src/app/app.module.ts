@@ -8,7 +8,7 @@ import { HttpClientModule} from "@angular/common/http";
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatDividerModule, MatInputModule,  MatListModule} from "@angular/material";
+import {MatDividerModule, MatInputModule, MatListModule, MatTooltipModule} from "@angular/material";
 import {MatButtonModule} from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
     // tables
@@ -42,7 +42,8 @@ import { TvMazeApiService } from "./models/services/tv-maze-api.service";
     HttpClientModule,
     MatExpansionModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   exports: [
     MatTableModule

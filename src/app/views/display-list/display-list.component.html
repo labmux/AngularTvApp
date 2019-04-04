@@ -12,14 +12,15 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <img src="{{s.show.image.medium}}" alt="Picture of a show">
+    <ng-container *ngIf="s.show.image">
+      <img src="{{s.show.image.medium}}" alt="Picture of a show">
 
-    <span [innerHTML]="s.show.summary"></span>
+      <span [innerHTML]="s.show.summary"></span>
+    </ng-container>
+
+
     <mat-action-row>
       <button mat-raised-button color="warning" (click)="details(s.show.id)">Details</button>
-
     </mat-action-row>
-
-
   </mat-expansion-panel>
 </mat-accordion>
