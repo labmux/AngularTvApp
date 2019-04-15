@@ -13,7 +13,7 @@ export class ToolbarComponent {
   name: string;
   search: string;   //ngModel of our search bar
 
-  constructor(private api: TvMazeApiService, private display: DisplayListComponent, private route: Router) { }
+  constructor(private api: TvMazeApiService, private display: DisplayListComponent, private router: Router) { }
 
     /**
      * On search, save search parameter and redirect to displayList component
@@ -21,6 +21,6 @@ export class ToolbarComponent {
      */
   searchBtn(search: string) : void {
 
-    this.route.navigateByUrl('shows/' + this.search);
+    this.router.navigateByUrl('shows/' + this.search);
   }
 }
